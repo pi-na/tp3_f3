@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763092955.43391 "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_parte2_latex/tp_f3_parte2.tex" "tp_f3_parte2.pdf" "tp_f3_parte2" 1763092957.80757 0
-  "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_parte2_latex/tp_f3_parte2.tex" 1763092954.79288 22566 4117b4fc3d33abc5c51381ff97e68a78 ""
+["pdflatex"] 1763098312.2244 "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_parte2_latex/tp_f3_parte2.tex" "tp_f3_parte2.pdf" "tp_f3_parte2" 1763098313.35648 0
+  "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_parte2_latex/tp_f3_parte2.tex" 1763098311.7999 37170 9f879af70abfc546d4eaf74d6210ec42 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1741388039 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1741388039 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1741388039 5466553 2748998d7db8078826afa1f272036265 ""
@@ -28,8 +28,6 @@
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1741388039 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1741388039 1120 8b7d695260f3cff42e636090a8002094 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1741388039 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
-  "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1741388039 1492 86331993fe614793f5e7e755835c31c5 ""
-  "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1741388039 1504 1747189e0441d1c18f3ea56fafc1c480 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1741388039 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1741388039 32080 340ef9bf63678554ee606688e7b5339d ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1741388039 32166 b0c356b15f19587482a9217ce1d8fa67 ""
@@ -40,6 +38,7 @@
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1741388039 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1741388039 35752 024fb6c41858982481f6968b5fc26508 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1741388039 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1741388039 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1741388039 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1741388039 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1741388039 36118 fad905eba93cff5bce1e185fe980a177 ""
@@ -195,8 +194,13 @@
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1741388039 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/web2c/texmf.cnf" 1741388039 42151 79f67285bdd95beca4d137b380b4b9e5 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1741388039 3346140 981dae4097bc43850a521b8b1e36e95f ""
-  "tp_f3_parte2.aux" 1763092957.64583 5521 917172714c98f5ef915880aef11ff569 "pdflatex"
-  "tp_f3_parte2.tex" 1763092954.79288 22566 4117b4fc3d33abc5c51381ff97e68a78 ""
+  "esquema_rectificador_media_onda.png" 1763096838.60388 12948 eee9f3774cc9de8d6eb762d75db7dc3c ""
+  "esquema_rectificador_onda_completa_puente.png" 1763096854.05721 35891 07c470a87212accc63c1e008f87efd21 ""
+  "foto_montaje_media_onda_resistencia.jpeg" 1763097142.00129 273703 38843a727697ffeec23a47505abef004 ""
+  "foto_montaje_onda_completa_con_capacitor.jpeg" 1763097141.9523 124398 a36cad8fd6651446888ecb78580db086 ""
+  "foto_montaje_onda_completa_puente.jpeg" 1763097142.07852 142245 f42f907a2e0e744f745b2ba928abb594 ""
+  "tp_f3_parte2.aux" 1763098313.26546 6936 a98bc65c584e0688412fb5efded7a041 "pdflatex"
+  "tp_f3_parte2.tex" 1763098311.7999 37170 9f879af70abfc546d4eaf74d6210ec42 ""
   (generated)
   "tp_f3_parte2.aux"
   "tp_f3_parte2.log"

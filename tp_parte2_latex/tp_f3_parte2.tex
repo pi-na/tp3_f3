@@ -16,7 +16,9 @@
 
 \begin{document}
 
-% Carátula (completar con los datos del grupo)
+%--------------------------------------------------
+% Carátula
+%--------------------------------------------------
 \begin{titlepage}
     \centering
     \vspace*{2cm}
@@ -27,12 +29,13 @@
     \textbf{\LARGE Trabajo Práctico N°3 -- Parte 2: Circuitos Rectificadores} \\
     \vspace{1.5cm}
     \begin{tabular}{ll}
-        \textbf{Grupo:} & \textit{Completar} \\
-        \textbf{Integrantes:} & \textit{Nombre Apellido (Legajo XXXXX)} \\
-                              & \textit{Nombre Apellido (Legajo XXXXX)} \\
-                              & \textit{Nombre Apellido (Legajo XXXXX)} \\
-        \textbf{Fecha de realización:} & \textit{Completar} \\
-        \textbf{Fecha de entrega:} & \textit{Completar} \\
+        \textbf{Grupo:} & \textit{3} \\
+        \textbf{Integrantes:} & \textit{Pinausig Castillo, Tomás (63167)} \\
+                              & \textit{Peral Belmont, Javier (62108)} \\
+                              & \textit{Ferrari, Franco (63094)} \\
+                              & \textit{Lopez Denegri, Agustina (64781)} \\
+        \textbf{Fecha de realización:} & \textit{Viernes 7 de Noviembre} \\
+        \textbf{Fecha de entrega:} & \textit{Viernes 14 de Noviembre} \\
     \end{tabular}
     \vspace{2cm}
     \begin{tabular}{|p{12cm}|}
@@ -61,19 +64,13 @@ Los objetivos específicos de esta segunda parte del trabajo práctico fueron:
 
 En las mediciones se observó que, tanto para el rectificador de media onda como para el de onda completa, la inclusión de un capacitor de filtrado reduce fuertemente la tensión de rizado. Para media onda con carga resistiva, el rizado pico a pico disminuyó desde aproximadamente \SI{36,6}{\volt} (sin capacitor) hasta \SI{0,78}{\volt} con el capacitor de mayor valor. Con carga \emph{cooler}, la reducción fue menos marcada debido a la corriente de carga mayor. En el rectificador de onda completa, el rizado con el mismo conjunto de capacitores resultó menor que en media onda, coherente con que la frecuencia del rizado es el doble. Estos resultados son consistentes con la teoría de filtros con capacitor y con el concepto de rizado en fuentes de alimentación.
 
-\begin{figure}[H]
-    \centering
-    \IfFileExists{foto_montaje_general_rectificadores}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_general_rectificadores}
-    }{
-        \fbox{Archivo \texttt{foto\_montaje\_general\_rectificadores} no encontrado}
-    }
-    \caption{Montaje general de los circuitos rectificadores sobre la protoboard. \textit{(Agregar foto correspondiente con este nombre de archivo.)}}
-\end{figure}
-
 \section{Introducción Teórica}
 
 \subsection{Rectificación de media onda y de onda completa}
+
+En la mayoría de los dispositivos electrónicos que utilizamos diariamente hay, en alguna etapa de su fuente de alimentación, uno o más rectificadores. Aunque estos equipos se conectan a la red de corriente alterna, internamente la gran mayoría de los circuitos trabajan con tensión continua, por lo que es necesario transformar la señal de entrada de CA en una señal lo más “plana” posible de CC.
+
+El elemento fundamental de un rectificador es el \textbf{diodo}. Un diodo ideal conduce corriente (presenta baja caída de tensión) cuando está polarizado en directa y bloquea el paso de corriente cuando está polarizado en inversa. Gracias a esta propiedad, al aplicar una señal alterna senoidal a un circuito rectificador se obtiene una señal en la que ciertos semiciclos son suprimidos: en el osciloscopio sólo se observan los semiciclos que corresponden al diodo conduciendo, mientras que los semiciclos en los que el diodo está polarizado en inversa quedan prácticamente anulados.
 
 Una fuente de tensión alterna sinusoidal puede modelarse como
 \[
@@ -107,33 +104,29 @@ y la tensión eficaz también resulta mayor que en el caso de media onda para el
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{esquema_rectificador_media_onda}{
-        \includegraphics[width=0.8\textwidth]{esquema_rectificador_media_onda}
+    \IfFileExists{esquema_rectificador_media_onda.png}{
+        \includegraphics[width=0.8\textwidth]{esquema_rectificador_media_onda.png}
     }{
-        \fbox{Archivo \texttt{esquema\_rectificador\_media\_onda} no encontrado}
+        \fbox{Archivo \texttt{esquema\_rectificador\_media\_onda.png} no encontrado}
     }
-    \caption{Esquema del rectificador de media onda con carga resistiva. \textit{(Agregar esquema o foto con este nombre de archivo.)}}
+    \caption{Esquema del rectificador de media onda con carga resistiva.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{esquema_rectificador_onda_completa_puente}{
-        \includegraphics[width=0.8\textwidth]{esquema_rectificador_onda_completa_puente}
+    \IfFileExists{esquema_rectificador_onda_completa_puente.png}{
+        \includegraphics[width=0.8\textwidth]{esquema_rectificador_onda_completa_puente.png}
     }{
-        \fbox{Archivo \texttt{esquema\_rectificador\_onda\_completa\_puente} no encontrado}
+        \fbox{Archivo \texttt{esquema\_rectificador\_onda\_completa\_puente.png} no encontrado}
     }
-    \caption{Esquema del rectificador de onda completa en puente de diodos. \textit{(Agregar esquema o foto con este nombre de archivo.)}}
+    \caption{Esquema del rectificador de onda completa en puente de diodos.}
 \end{figure}
 
 \subsection{Capacitor de filtrado y tensión de rizado}
 
 Para obtener una tensión de salida más “continua”, se conecta un capacitor en paralelo con la carga. El capacitor se carga cerca del máximo de la onda rectificada y se descarga a través de la carga durante los intervalos en los que la tensión del rectificador cae por debajo de la tensión almacenada.
 
-Idealizando la descarga del capacitor como aproximadamente lineal entre picos sucesivos, la tensión de rizado pico a pico puede estimarse por
-\[
-V_{\text{ripple}} \approx \frac{I_{\text{carga}}}{f_{\text{r}}\,C},
-\]
-donde \(I_{\text{carga}}\) es la corriente media sobre la carga, \(C\) la capacitancia y \(f_{\text{r}}\) la frecuencia de rizado: \(f_{\text{r}} = f\) en media onda y \(f_{\text{r}} = 2f\) en onda completa. A mayor \(C\) o mayor \(f_{\text{r}}\), menor es el rizado esperado.
+De esta manera, la variación de la tensión entre picos se reduce: cuanto mayor es la capacitancia del capacitor de filtrado, menor es la amplitud del rizado superpuesto a la componente continua, y más se asemeja la salida a una tensión continua ideal.
 
 Es útil expresar la tensión de salida como suma de componente continua y rizado:
 \[
@@ -145,7 +138,7 @@ El \textbf{factor de rizado} se define como
 \[
 r = \frac{V_{\text{rizado,RMS}}}{\bar{V}},
 \]
-es decir, el cociente entre el valor eficaz del rizado y la componente continua. Aunque en este trabajo no se determinó \(\bar{V}\) numéricamente a partir de las mediciones, la reducción observada en \(V_{\text{ripple}}\) permite discutir cualitativamente el comportamiento de \(r\).
+es decir, el cociente entre el valor eficaz del rizado y la componente continua.
 
 \subsection{Tensión pico, promedio y eficaz}
 
@@ -170,10 +163,10 @@ Los multímetros suelen mostrar el valor eficaz (o el promedio rectificado equiv
 
 \begin{itemize}
     \item Fuente de alterna (\emph{transformador} o fuente de laboratorio) de aproximadamente \SI{12}{\volt} RMS a \SI{50}{\hertz}.
-    \item Diodos para rectificación (por ejemplo, 1N4007) para el rectificador de media onda y el puente de onda completa.
-    \item Resistencias de carga (por ejemplo, \(R \approx \SI{100}{\ohm}\)). \textit{(Completar con el valor exacto utilizado.)}
+    \item Diodos para rectificación para el rectificador de media onda y el puente de onda completa.
+    \item Resistencia de carga 100 ohmios.
     \item Carga \emph{cooler} (motor/ventilador de PC).
-    \item Capacitores de filtrado \(C_1\), \(C_2\) y \(C_3\). \textit{(Completar con los valores nominales, por ejemplo en \si{\micro\farad}.)}
+    \item Capacitores de filtrado (\SI{100}{\micro\farad}, \SI{220}{\micro\farad}, \SI{2200}{\micro\farad}).
     \item Osciloscopio digital para medir formas de onda y amplitudes pico a pico.
     \item Multímetro para verificar valores medios o eficaces de tensión.
     \item Protoboard, cables y puntas de prueba.
@@ -181,32 +174,33 @@ Los multímetros suelen mostrar el valor eficaz (o el promedio rectificado equiv
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{foto_montaje_media_onda_resistencia}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_media_onda_resistencia}
+    \IfFileExists{foto_montaje_media_onda_resistencia.jpeg}{
+        \includegraphics[width=0.8\textwidth]{foto_montaje_media_onda_resistencia.jpeg}
     }{
         \fbox{Archivo \texttt{foto\_montaje\_media\_onda\_resistencia} no encontrado}
     }
-    \caption{Montaje del rectificador de media onda con carga resistiva. \textit{(Agregar foto correspondiente con este nombre de archivo.)}}
+    \caption{Montaje del rectificador de media onda con carga resistiva.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{foto_montaje_media_onda_cooler}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_media_onda_cooler}
-    }{
-        \fbox{Archivo \texttt{foto\_montaje\_media\_onda\_cooler} no encontrado}
-    }
-    \caption{Montaje del rectificador de media onda con carga \emph{cooler}. \textit{(Agregar foto correspondiente con este nombre de archivo.)}}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \IfFileExists{foto_montaje_onda_completa_puente}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_onda_completa_puente}
+    \IfFileExists{foto_montaje_onda_completa_puente.jpeg}{
+        \includegraphics[width=0.8\textwidth]{foto_montaje_onda_completa_puente.jpeg}
     }{
         \fbox{Archivo \texttt{foto\_montaje\_onda\_completa\_puente} no encontrado}
     }
-    \caption{Montaje del rectificador de onda completa en puente de diodos. \textit{(Agregar foto correspondiente con este nombre de archivo.)}}
+    \caption{Montaje del rectificador de onda completa en puente de diodos.}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{foto_montaje_onda_completa_con_capacitor.jpeg}{
+        \includegraphics[width=0.8\textwidth]{foto_montaje_onda_completa_con_capacitor.jpeg}
+    }{
+        \fbox{Archivo \texttt{foto\_montaje\_media\_onda\_cooler} no encontrado}
+    }
+    \caption{Montaje del rectificador de onda completa con resistencia y un capacitor.}
 \end{figure}
 
 \subsection{Procedimiento experimental}
@@ -237,7 +231,7 @@ Los multímetros suelen mostrar el valor eficaz (o el promedio rectificado equiv
 
 \section{Datos Obtenidos y Análisis}
 
-En esta sección se presentan las mediciones de tensión pico a pico tanto de la señal filtrada como de la señal de entrada sin filtrar, utilizando los datos del archivo \texttt{MEDICIONES F3  - TP3P2Data.csv}.
+En esta sección se presentan las mediciones de tensión pico a pico tanto de la señal filtrada como de la señal de entrada sin filtrar.
 
 \subsection{Rectificador de media onda con carga resistiva}
 
@@ -258,14 +252,53 @@ Para esta configuración se midió la tensión pico a pico de la señal de entra
     \caption{Tensiones pico a pico medidas en el rectificador de media onda con carga resistiva.}
 \end{table}
 
-Tomando como referencia la tensión pico a pico de entrada sin filtrar (\(\approx \SI{36,6}{\volt}\)), se puede estimar una reducción relativa del rizado para cada capacitor:
+Tomando como referencia la tensión pico a pico de entrada sin filtrar (\(\approx \SI{36,6}{\volt}\)), se puede estimar el \emph{porcentaje de rizado} de la salida para cada capacitor como el cociente entre la \(V_{\text{pp}}\) filtrada y la \(V_{\text{pp}}\) de entrada:
 \begin{itemize}
-    \item $C_1$: $V_{\text{ripple}} \approx \SI{12,1}{\volt}$, es decir, alrededor del 33 \% del valor de referencia.
-    \item $C_2$: $V_{\text{ripple}} \approx \SI{6,7}{\volt}$, aproximadamente un 18 \%.
-    \item $C_3$: $V_{\text{ripple}} \approx \SI{0,78}{\volt}$, cerca de un 2 \%.
+    \item \(C_1\): \(36{,}6 \rightarrow 12{,}1\ \text{V}\), rizado relativo \(\approx 12{,}1/36{,}6 \approx 0{,}33\) (33\%).
+    \item \(C_2\): \(36{,}6 \rightarrow 6{,}7\ \text{V}\), rizado relativo \(\approx 6{,}7/36{,}6 \approx 0{,}18\) (18\%).
+    \item \(C_3\): \(36{,}6 \rightarrow 0{,}78\ \text{V}\), rizado relativo \(\approx 0{,}78/36{,}6 \approx 0{,}02\) (2\%).
 \end{itemize}
+Es decir, a medida que aumenta la capacitancia, el porcentaje de rizado se reduce de manera muy significativa, y la señal de salida se aproxima cada vez más a una tensión continua.
 
-La fuerte reducción del rizado al aumentar la capacitancia es coherente con la relación inversa \(V_{\text{ripple}} \propto 1/C\).
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_resistencia_sin_C}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_sin_C}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_sin\_C} no encontrado}
+    }
+    \caption{Onda de salida del rectificador de media onda con carga resistiva, sin capacitor de filtrado (salida pulsante).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_resistencia_C1}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C1}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C1} no encontrado}
+    }
+    \caption{Salida del rectificador de media onda con carga resistiva y capacitor \(C_1\).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_resistencia_C2}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C2}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C2} no encontrado}
+    }
+    \caption{Salida del rectificador de media onda con carga resistiva y capacitor \(C_2\).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_resistencia_C3}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C3}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C3} no encontrado}
+    }
+    \caption{Salida del rectificador de media onda con carga resistiva y capacitor \(C_3\).}
+\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -286,16 +319,6 @@ La fuerte reducción del rizado al aumentar la capacitancia es coherente con la 
         \end{axis}
     \end{tikzpicture}
     \caption{Evolución de la tensión pico a pico en media onda con carga resistiva al variar el capacitor de filtrado.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \IfFileExists{oscilograma_media_onda_resistencia_C3}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C3}
-    }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C3} no encontrado}
-    }
-    \caption{Oscilograma de la salida del rectificador de media onda con carga resistiva y capacitor $C_3$ (máxima filtración). \textit{(Agregar captura de pantalla con este nombre de archivo.)}}
 \end{figure}
 
 \subsection{Rectificador de media onda con carga \emph{cooler}}
@@ -335,7 +358,37 @@ En la práctica, se observó que la velocidad del \emph{cooler} aumenta al utili
     }{
         \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_sin\_C} no encontrado}
     }
-    \caption{Oscilograma de la salida del rectificador de media onda alimentando el \emph{cooler}, sin capacitor de filtrado. \textit{(Agregar captura de pantalla con este nombre de archivo.)}}
+    \caption{Oscilograma de la salida del rectificador de media onda alimentando el \emph{cooler}, sin capacitor de filtrado.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_cooler_C1}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_C1}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_C1} no encontrado}
+    }
+    \caption{Salida del rectificador de media onda alimentando el \emph{cooler} con capacitor \(C_1\).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_cooler_C2}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_C2}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_C2} no encontrado}
+    }
+    \caption{Salida del rectificador de media onda alimentando el \emph{cooler} con capacitor \(C_2\).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_media_onda_cooler_C3}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_C3}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_C3} no encontrado}
+    }
+    \caption{Salida del rectificador de media onda alimentando el \emph{cooler} con capacitor \(C_3\).}
 \end{figure}
 
 \subsection{Rectificador de onda completa}
@@ -387,15 +440,51 @@ La reducción del rizado es notablemente eficiente en onda completa, especialmen
     \caption{Tensión pico a pico en el rectificador de onda completa al variar el capacitor de filtrado.}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_onda_completa_sin_C}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_sin_C}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_sin\_C} no encontrado}
+    }
+    \caption{Onda de salida del rectificador de onda completa sin capacitor de filtrado.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_onda_completa_C1}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_C1}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_C1} no encontrado}
+    }
+    \caption{Salida del rectificador de onda completa con capacitor \(C_1\).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_onda_completa_C2}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_C2}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_C2} no encontrado}
+    }
+    \caption{Salida del rectificador de onda completa con capacitor \(C_2\).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{oscilograma_onda_completa_C3}{
+        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_C3}
+    }{
+        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_C3} no encontrado}
+    }
+    \caption{Salida del rectificador de onda completa con capacitor \(C_3\).}
+\end{figure}
+
 \section{Discusión de Resultados}
 
 \subsection{Efecto del capacitor de filtrado}
 
-En todas las configuraciones se verifica que el aumento de la capacitancia reduce el rizado, tal como predice
-\[
-V_{\text{ripple}} \approx \frac{I_{\text{carga}}}{f_{\text{r}}\,C}.
-\]
-Aunque no se calcularon \(I_{\text{carga}}\) ni los valores exactos de \(C_1\), \(C_2\) y \(C_3\) en este informe, la variación de \(V_{\text{pp}}\) medida es compatible con una disminución aproximadamente proporcional a \(1/C\), especialmente entre \(C_1\) y \(C_3\).
+En todas las configuraciones se verifica que el aumento de la capacitancia reduce el rizado: las tensiones pico a pico de salida medidas muestran que, para un mismo tipo de rectificador, los valores de \(V_{\text{pp}}\) disminuyen de forma sistemática al pasar de \(C_1\) a \(C_3\). Esto refleja que el capacitor almacena más carga y sostiene la tensión durante más tiempo entre picos, acercando la señal de salida a una tensión continua ideal.
 
 \subsection{Comparación media onda vs. onda completa}
 
@@ -405,7 +494,7 @@ Además, el valor medio de la tensión de salida en onda completa es mayor, lo q
 
 \subsection{Carga resistiva vs. carga \emph{cooler}}
 
-Comparando las tablas de media onda, se observa que, para un mismo capacitor, el rizado con carga \emph{cooler} es mayor que con carga resistiva. Esto es coherente con una corriente media más alta a través del capacitor: mayor corriente implica una descarga más rápida entre picos, y por lo tanto un \(V_{\text{ripple}}\) mayor.
+Comparando las tablas de media onda, se observa que, para un mismo capacitor, el rizado con carga \emph{cooler} es mayor que con carga resistiva. Esto es coherente con una corriente media más alta a través del capacitor: mayor corriente implica una descarga más rápida entre picos, y por lo tanto una variación pico a pico más grande en la tensión de salida.
 
 En términos cualitativos, la velocidad de giro del \emph{cooler} aumenta al incrementar la capacitancia, ya que la tensión de alimentación se vuelve más cercana a una continua pura.
 
@@ -413,7 +502,151 @@ En términos cualitativos, la velocidad de giro del \emph{cooler} aumenta al inc
 
 En el osciloscopio se midieron principalmente tensiones pico a pico, mientras que el multímetro reporta valores eficaces o promedios (según el modo de medición). En señales muy rizadas, el valor mostrado por el multímetro puede diferir significativamente de la componente continua ideal, ya que integra tanto la componente continua como el rizado.
 
-En cambio, al aumentar la capacitancia y reducir el rizado, el valor medido por el multímetro se aproxima más a la tensión continua esperada a la salida del rectificador filtrado.
+Como ejemplo, en una de las mediciones sin capacitor de filtrado, para el rectificador de media onda con carga resistiva, el multímetro registró una tensión de salida de \SI{9,64}{\volt}. A partir de la onda de entrada sin filtrar se midió una tensión pico a pico \(V_{\text{pp,entrada}} \approx \SI{36,6}{\volt}\); suponiendo que la amplitud pico de la onda rectificada es aproximadamente la misma, se tiene
+\[
+V_{\text{p}} \approx \frac{V_{\text{pp}}}{2} \approx \SI{18,3}{\volt}.
+\]
+Para una media onda rectificada de frecuencia \(f = \SI{50}{\hertz}\) (periodo \(T = \SI{0,02}{\second}\)), el valor eficaz teórico se obtiene de
+\[
+V_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^{T} v^2(t)\, dt}
+              = \sqrt{\frac{1}{T}\int_0^{T/2} V_{\text{p}}^{2} \sin^{2}(\omega t)\, dt}
+              = \frac{V_{\text{p}}}{2}
+              \approx \SI{9,2}{\volt}.
+\]
+Con el multimetro se midieron aproximadamente \SI{9,64}{\volt}. Valor cercano al teórico.
+
+\subsection{Respuestas a las preguntas del rectificador de media onda}
+
+\begin{enumerate}
+    \item \textbf{Cálculo de \(V_{\text{RMS}}\) sin capacitor de filtrado y comparación con el multímetro.}\\[4pt]
+    Para el rectificador de media onda con carga resistiva, sin capacitor, de la señal de entrada se obtuvo una tensión pico a pico \(V_{\text{pp,entrada}} \approx \SI{36,6}{\volt}\). Suponiendo que la amplitud pico de la onda rectificada es aproximadamente la misma, resulta:
+    \[
+        V_{\text{p}} \approx \frac{V_{\text{pp}}}{2} \approx \SI{18,3}{\volt}.
+    \]
+    Para una media onda rectificada con frecuencia \(f = \SI{50}{\hertz}\) (\(T = \SI{0,02}{\second}\)), la expresión para el valor eficaz teórico es
+    \[
+        V_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^{T} v^2(t)\, dt}
+                      = \sqrt{\frac{1}{T}\int_0^{T/2} V_{\text{p}}^{2} \sin^{2}(\omega t)\, dt}.
+    \]
+    Evaluando la integral:
+    \[
+        \int_0^{T/2} \sin^{2}(\omega t)\, dt = \frac{T}{4},
+    \]
+    por lo que
+    \[
+        V_{\text{RMS}} = \sqrt{\frac{1}{T} V_{\text{p}}^{2} \frac{T}{4}} = \frac{V_{\text{p}}}{2}
+        \approx \SI{9,2}{\volt}.
+    \]
+    El multímetro, en cambio, midió una tensión de salida de \SI{9,64}{\volt}. El valor teórico es mayor que el medido, lo que se explica porque la forma de onda real no es una media onda senoidal ideal (hay caídas en el diodo y deformaciones) y porque el instrumento está calibrado para senoidales puras, por lo que entrega un valor más cercano a un promedio efectivo que al valor eficaz ideal calculado.
+
+    \item \textbf{Relación entre la amplitud del rizado y la capacitancia.}\\[4pt]
+    A partir de la tabla de media onda con carga resistiva:
+    \[
+        V_{\text{pp}}(\text{sin C}) \approx \SI{36,6}{\volt},\quad
+        V_{\text{pp}}(C_1) \approx \SI{12,1}{\volt},\quad
+        V_{\text{pp}}(C_2) \approx \SI{6,7}{\volt},\quad
+        V_{\text{pp}}(C_3) \approx \SI{0,78}{\volt},
+    \]
+    se observa que, al incrementar la capacitancia del capacitor de filtrado (de \(C_1\) a \(C_3\)), la amplitud del rizado (medida aquí como la variación pico a pico de la señal de salida) disminuye de manera marcada. En términos cualitativos, puede decirse que la amplitud del rizado es inversamente proporcional a la capacitancia: capacitores más grandes almacenan más carga y sostienen la tensión de salida durante más tiempo entre picos de la señal rectificada.
+
+    \item \textbf{Por qué se denomina “capacitor de filtrado” y qué filtra.}\\[4pt]
+    Se lo llama \emph{capacitor de filtrado} porque su función es “filtrar” la componente alterna (el rizado) de la señal rectificada, dejando como componente dominante una tensión continua aproximadamente constante. En el dominio de frecuencias, el capacitor presenta baja impedancia para las componentes alternas de alta frecuencia y mayor impedancia para la componente continua, derivando la parte alterna hacia masa y reduciendo así las variaciones de la tensión sobre la carga.
+
+    \item \textbf{Por qué aumenta la velocidad de rotación del \emph{cooler} al aumentar la capacitancia.}\\[4pt]
+    El \emph{cooler} se comporta como una carga que requiere una tensión lo más constante posible para funcionar eficientemente. Cuando la capacitancia del capacitor de filtrado es baja o nula, la tensión de salida presenta un rizado importante: la tensión cae entre picos y el motor recibe una energía promedio menor, lo que reduce su velocidad. Al aumentar la capacitancia, la tensión se mantiene más alta y más constante durante todo el ciclo, de modo que el \emph{cooler} recibe una tensión efectiva mayor y su velocidad de rotación aumenta.
+
+    \item \textbf{Relación con la tensión de salida medida con el multímetro en continua.}\\[4pt]
+    El multímetro, en escala de continua, tiende a mostrar un valor cercano al valor medio (o a una aproximación de éste) de la señal de salida. Al incrementar la capacitancia del capacitor de filtrado, la componente continua aumenta y el rizado disminuye, por lo que el valor medio de la señal crece. En consecuencia, la tensión indicada por el multímetro en continua también aumenta con la capacitancia, reflejando que la fuente entrega una tensión de salida más “llena” y con menos caídas entre picos.
+
+    \item \textbf{Cálculo del factor de rizado \(r\) sin capacitor y eficiencia del rectificador de media onda.}\\[4pt]
+    La señal de salida sin capacitor puede escribirse como
+    \[
+        v(t) = \bar{V} + v_{\text{rizado}}(t),
+    \]
+    donde \(\bar{V}\) es el valor medio y \(v_{\text{rizado}}(t)\) tiene valor medio nulo. Para una media onda rectificada ideal:
+    \[
+        \bar{V} = \frac{1}{T}\int_0^{T/2} V_{\text{p}} \sin(\omega t)\, dt = \frac{V_{\text{p}}}{\pi},
+    \]
+    y ya se vio que
+    \[
+        V_{\text{RMS}} = \frac{V_{\text{p}}}{2}.
+    \]
+    El valor eficaz del rizado se obtiene de
+    \[
+        V_{\text{rizado,RMS}} = \sqrt{V_{\text{RMS}}^{2} - \bar{V}^{2}}
+        = \sqrt{\left(\frac{V_{\text{p}}}{2}\right)^{2} - \left(\frac{V_{\text{p}}}{\pi}\right)^{2}}
+        = V_{\text{p}} \sqrt{\frac{1}{4} - \frac{1}{\pi^{2}}}.
+    \]
+    El factor de rizado se define como
+    \[
+        r = \frac{V_{\text{rizado,RMS}}}{\bar{V}}
+          = \frac{V_{\text{p}} \sqrt{\tfrac{1}{4} - \tfrac{1}{\pi^{2}}}}{V_{\text{p}}/\pi}
+          = \pi\,\sqrt{\frac{1}{4} - \frac{1}{\pi^{2}}} \approx 1{,}21.
+    \]
+    Si se usa el valor numérico \(V_{\text{p}} \approx \SI{18,3}{\volt}\) obtenido de la medición, el valor de \(r\) coincide con este resultado adimensional. Un factor de rizado \(r > 1\) indica que la componente alterna del rizado tiene un valor eficaz mayor que la componente continua, lo cual implica una \textbf{baja eficiencia energética} del rectificador de media onda como fuente de continua: gran parte de la potencia entregada a la carga corresponde a variaciones alternas que no son deseables en la mayoría de los circuitos electrónicos.
+\end{enumerate}
+
+\subsection{Respuestas a las preguntas del rectificador de onda completa}
+
+\begin{enumerate}
+    \item \textbf{Cálculo de \(V_{\text{RMS}}\) sin capacitor de filtrado y comparación.}\\[4pt]
+    Para el rectificador de onda completa, sin capacitor, de la tabla de datos se obtiene una tensión pico a pico de salida
+    \[
+        V_{\text{pp,salida}} \approx \SI{16,1}{\volt},
+    \]
+    por lo que la amplitud pico de la onda rectificada es aproximadamente
+    \[
+        V_{\text{p}} \approx \frac{V_{\text{pp,salida}}}{2} \approx \SI{8,05}{\volt}.
+    \]
+    En una onda rectificada de onda completa ideal (sin capacitor), la expresión del valor eficaz teórico es
+    \[
+        V_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^{T} V_{\text{p}}^{2} \sin^{2}(\omega t)\, dt}
+                      = \frac{V_{\text{p}}}{\sqrt{2}}
+                      \approx \frac{8{,}05}{\sqrt{2}} \approx \SI{5,7}{\volt}.
+    \]
+    Este es el valor eficaz teórico que debería medirse a la salida del rectificador de onda completa sin capacitor.
+
+    \item \textbf{Comparación de las tensiones de salida para los distintos capacitores con media onda.}\\[4pt]
+    Comparando las tensiones pico a pico de salida filtrada para onda completa
+    \[
+        V_{\text{pp}}^{\text{OC}} = 16{,}1,\ 6{,}56,\ 3{,}04,\ 0{,}57\ \text{V},
+    \]
+    con las correspondientes de media onda
+    \[
+        V_{\text{pp}}^{\text{MO}} = 36{,}6,\ 12{,}1,\ 6{,}7,\ 0{,}78\ \text{V},
+    \]
+    se observa que, para un mismo capacitor, el rectificador de onda completa presenta \textbf{tensiones pico a pico de salida menores} que el rectificador de media onda. Esto significa que la salida de onda completa es más “suave” (menor variación) para el mismo valor de capacitancia, lo cual es consistente con que la frecuencia de rizado en onda completa es el doble de la de media onda.
+
+    \item \textbf{Comparación de las amplitudes pico a pico de los rizados.}\\[4pt]
+    Como el rizado se refleja directamente en la variación pico a pico de la señal de salida, las mismas tablas muestran que para cada valor de capacitor se cumple
+    \[
+        V_{\text{pp,rizado}}^{\text{OC}} < V_{\text{pp,rizado}}^{\text{MO}}.
+    \]
+    Por ejemplo, sin capacitor la amplitud de rizado es de \(\approx \SI{36,6}{\volt}\) en media onda contra \(\approx \SI{16,1}{\volt}\) en onda completa; con el capacitor de mayor valor, las amplitudes son \(\approx \SI{0,78}{\volt}\) (media onda) y \(\approx \SI{0,57}{\volt}\) (onda completa). Esto confirma que el rectificador de onda completa es más eficiente filtrando el rizado, incluso antes de agregar el capacitor.
+
+    \item \textbf{Factor de rizado sin capacitor en el rectificador de onda completa y comparación de eficiencia.}\\[4pt]
+    Para la onda completa rectificada ideal, el valor medio de la tensión es
+    \[
+        \bar{V} = \frac{1}{T}\int_0^{T} |V_{\text{p}}\sin(\omega t)|\, dt = \frac{2V_{\text{p}}}{\pi},
+    \]
+    mientras que el valor eficaz es
+    \[
+        V_{\text{RMS}} = \frac{V_{\text{p}}}{\sqrt{2}}.
+    \]
+    El valor eficaz del rizado se obtiene de
+    \[
+        V_{\text{rizado,RMS}} = \sqrt{V_{\text{RMS}}^{2} - \bar{V}^{2}}
+        = \sqrt{\frac{V_{\text{p}}^{2}}{2} - \left(\frac{2V_{\text{p}}}{\pi}\right)^{2}}
+        = V_{\text{p}} \sqrt{\frac{1}{2} - \frac{4}{\pi^{2}}}.
+    \]
+    Por lo tanto, el factor de rizado es
+    \[
+        r = \frac{V_{\text{rizado,RMS}}}{\bar{V}}
+          = \frac{V_{\text{p}} \sqrt{\tfrac{1}{2} - \tfrac{4}{\pi^{2}}}}{2V_{\text{p}}/\pi}
+          = \frac{\pi}{2}\,\sqrt{\frac{1}{2} - \frac{4}{\pi^{2}}} \approx 0{,}48.
+    \]
+    Este valor es muy inferior al obtenido para media onda (\(r \approx 1{,}21\)), lo que indica que, incluso sin capacitor, el rectificador de onda completa entrega una tensión con \textbf{mucho menor contenido alterno} respecto de su componente continua. En otras palabras, la \textbf{eficiencia energética} del rectificador de onda completa como fuente de continua es significativamente mayor que la del rectificador de media onda, ya que una fracción mayor de la potencia entregada corresponde a componente continua útil.
+\end{enumerate}
 
 \section{Aplicaciones Prácticas}
 
