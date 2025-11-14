@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  14 NOV 2025 02:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  14 NOV 2025 02:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,26 +491,26 @@ LaTeX Info: Redefining \% on input line 8.
 )
 \openout1 = `tp_f3_parte2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Info: Redefining \. on input line 17.
-LaTeX Info: Redefining \% on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 17.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -581,55 +581,119 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 <esquema_rectificador_media_onda.png, id=21, 365.365pt x 182.6825pt>
 File: esquema_rectificador_media_onda.png Graphic file (type png)
 <use esquema_rectificador_media_onda.png>
-Package pdftex.def Info: esquema_rectificador_media_onda.png  used on input line 111.
-(pdftex.def)             Requested size: 364.19667pt x 182.1078pt.
+Package pdftex.def Info: esquema_rectificador_media_onda.png  used on input line 113.
+(pdftex.def)             Requested size: 182.09486pt x 91.04832pt.
 <esquema_rectificador_onda_completa_puente.png, id=23, 399.4925pt x 239.89626pt>
 File: esquema_rectificador_onda_completa_puente.png Graphic file (type png)
 <use esquema_rectificador_onda_completa_puente.png>
-Package pdftex.def Info: esquema_rectificador_onda_completa_puente.png  used on input line 121.
-(pdftex.def)             Requested size: 364.19667pt x 218.71223pt.
+Package pdftex.def Info: esquema_rectificador_onda_completa_puente.png  used on input line 123.
+(pdftex.def)             Requested size: 182.09486pt x 109.34697pt.
 
 
 [2 <./esquema_rectificador_media_onda.png> <./esquema_rectificador_onda_completa_puente.png>]
+<foto_montaje_media_onda_resistencia.png, id=29, 818.05624pt x 568.1225pt>
+File: foto_montaje_media_onda_resistencia.png Graphic file (type png)
+<use foto_montaje_media_onda_resistencia.png>
+Package pdftex.def Info: foto_montaje_media_onda_resistencia.png  used on input line 183.
+(pdftex.def)             Requested size: 182.09486pt x 126.46103pt.
+
 
 [3]
-<foto_montaje_media_onda_resistencia.jpeg, id=33, 1284.8pt x 963.6pt>
-File: foto_montaje_media_onda_resistencia.jpeg Graphic file (type jpg)
-<use foto_montaje_media_onda_resistencia.jpeg>
-Package pdftex.def Info: foto_montaje_media_onda_resistencia.jpeg  used on input line 181.
-(pdftex.def)             Requested size: 364.19667pt x 273.14381pt.
-<foto_montaje_onda_completa_puente.jpeg, id=34, 1284.8pt x 963.6pt>
-File: foto_montaje_onda_completa_puente.jpeg Graphic file (type jpg)
-<use foto_montaje_onda_completa_puente.jpeg>
-Package pdftex.def Info: foto_montaje_onda_completa_puente.jpeg  used on input line 191.
-(pdftex.def)             Requested size: 364.19667pt x 273.14381pt.
+<foto_montaje_onda_completa_puente.png, id=35, 806.01125pt x 541.02126pt>
+File: foto_montaje_onda_completa_puente.png Graphic file (type png)
+<use foto_montaje_onda_completa_puente.png>
+Package pdftex.def Info: foto_montaje_onda_completa_puente.png  used on input line 193.
+(pdftex.def)             Requested size: 182.09486pt x 122.2281pt.
+<foto_montaje_onda_completa_con_capacitor.png, id=36, 1028.84375pt x 721.69624pt>
+File: foto_montaje_onda_completa_con_capacitor.png Graphic file (type png)
+<use foto_montaje_onda_completa_con_capacitor.png>
+Package pdftex.def Info: foto_montaje_onda_completa_con_capacitor.png  used on input line 204.
+(pdftex.def)             Requested size: 182.09486pt x 127.73032pt.
 
 
-[4 <./foto_montaje_media_onda_resistencia.jpeg>]
-<foto_montaje_onda_completa_con_capacitor.jpeg, id=39, 963.6pt x 1284.8pt>
-File: foto_montaje_onda_completa_con_capacitor.jpeg Graphic file (type jpg)
-<use foto_montaje_onda_completa_con_capacitor.jpeg>
-Package pdftex.def Info: foto_montaje_onda_completa_con_capacitor.jpeg  used on input line 202.
-(pdftex.def)             Requested size: 364.19667pt x 485.58247pt.
+[4 <./foto_montaje_media_onda_resistencia.png> <./foto_montaje_onda_completa_puente.png> <./foto_montaje_onda_completa_con_capacitor.png>]
+
+[5]
+<media_onda_sin_c.png, id=47, 642.4pt x 521.95pt>
+File: media_onda_sin_c.png Graphic file (type png)
+<use media_onda_sin_c.png>
+Package pdftex.def Info: media_onda_sin_c.png  used on input line 271.
+(pdftex.def)             Requested size: 182.09486pt x 147.9529pt.
+<media_onda_c1.png, id=48, 505.89pt x 424.58624pt>
+File: media_onda_c1.png Graphic file (type png)
+<use media_onda_c1.png>
+Package pdftex.def Info: media_onda_c1.png  used on input line 281.
+(pdftex.def)             Requested size: 182.09486pt x 152.83148pt.
+<media_onda_c2.png, id=49, 629.35126pt x 510.90875pt>
+File: media_onda_c2.png Graphic file (type png)
+<use media_onda_c2.png>
+Package pdftex.def Info: media_onda_c2.png  used on input line 291.
+(pdftex.def)             Requested size: 182.09486pt x 147.82452pt.
+<media_onda_c3.png, id=50, 617.30624pt x 531.9875pt>
+File: media_onda_c3.png Graphic file (type png)
+<use media_onda_c3.png>
+Package pdftex.def Info: media_onda_c3.png  used on input line 301.
+(pdftex.def)             Requested size: 182.09486pt x 156.92683pt.
 
 
-[5 <./foto_montaje_onda_completa_puente.jpeg>]
-
-[6 <./foto_montaje_onda_completa_con_capacitor.jpeg>]
-
-[7]
-Package pgfplots info on input line 317: Using 'lua backend=false' for axis: x coord trafo unsupported.
+[6 <./media_onda_sin_c.png> <./media_onda_c1.png> <./media_onda_c2.png>]
+Package pgfplots info on input line 319: Using 'lua backend=false' for axis: x coord trafo unsupported.
 
 
-[8]
+[7 <./media_onda_c3.png>]
+<cooler_sin_c.png, id=64, 685.56125pt x 520.94624pt>
+File: cooler_sin_c.png Graphic file (type png)
+<use cooler_sin_c.png>
+Package pdftex.def Info: cooler_sin_c.png  used on input line 362.
+(pdftex.def)             Requested size: 182.09486pt x 138.36806pt.
+<cooler_c1.png, id=65, 861.2175pt x 812.03375pt>
+File: cooler_c1.png Graphic file (type png)
+<use cooler_c1.png>
+Package pdftex.def Info: cooler_c1.png  used on input line 372.
+(pdftex.def)             Requested size: 182.09486pt x 171.69684pt.
+<cooler_c2.png, id=66, 910.40125pt x 734.745pt>
+File: cooler_c2.png Graphic file (type png)
+<use cooler_c2.png>
+Package pdftex.def Info: cooler_c2.png  used on input line 382.
+(pdftex.def)             Requested size: 182.09486pt x 146.9576pt.
 
-[9]
-Package pgfplots info on input line 436: Using 'lua backend=false' for axis: x coord trafo unsupported.
+
+[8 <./cooler_sin_c.png> <./cooler_c1.png>]
+<cooler_c3.png, id=72, 894.34125pt x 669.50125pt>
+File: cooler_c3.png Graphic file (type png)
+<use cooler_c3.png>
+Package pdftex.def Info: cooler_c3.png  used on input line 392.
+(pdftex.def)             Requested size: 182.09486pt x 136.30879pt.
+Package pgfplots info on input line 438: Using 'lua backend=false' for axis: x coord trafo unsupported.
 
 
-[10]
+[9 <./cooler_c2.png> <./cooler_c3.png>]
+<onda_completa_sin_c.png, id=78, 767.86874pt x 629.35126pt>
+File: onda_completa_sin_c.png Graphic file (type png)
+<use onda_completa_sin_c.png>
+Package pdftex.def Info: onda_completa_sin_c.png  used on input line 451.
+(pdftex.def)             Requested size: 182.09486pt x 149.24199pt.
+<onda_completa_c1.png, id=79, 944.52875pt x 759.83875pt>
+File: onda_completa_c1.png Graphic file (type png)
+<use onda_completa_c1.png>
+Package pdftex.def Info: onda_completa_c1.png  used on input line 461.
+(pdftex.def)             Requested size: 182.09486pt x 146.481pt.
+<onda_completa_c2.png, id=80, 763.85374pt x 662.475pt>
+File: onda_completa_c2.png Graphic file (type png)
+<use onda_completa_c2.png>
+Package pdftex.def Info: onda_completa_c2.png  used on input line 471.
+(pdftex.def)             Requested size: 182.09486pt x 157.92574pt.
 
-[11]
+
+[10 <./onda_completa_sin_c.png> <./onda_completa_c1.png>]
+<onda_completa_c3.png, id=86, 1104.125pt x 902.37125pt>
+File: onda_completa_c3.png Graphic file (type png)
+<use onda_completa_c3.png>
+Package pdftex.def Info: onda_completa_c3.png  used on input line 481.
+(pdftex.def)             Requested size: 182.09486pt x 148.81598pt.
+
+
+[11 <./onda_completa_c2.png> <./onda_completa_c3.png>]
 
 [12]
 
@@ -649,18 +713,18 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30910 strings out of 473190
- 810619 string characters out of 5704335
- 1291212 words of memory out of 5000000
- 53750 multiletter control sequences out of 15000+600000
- 568422 words of font info for 68 fonts, out of 8000000 for 9000
+ 30968 strings out of 473190
+ 811679 string characters out of 5704335
+ 1288212 words of memory out of 5000000
+ 53809 multiletter control sequences out of 15000+600000
+ 568253 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,105p,881b,2288s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tp_f3_parte2.pdf (17 pages, 780379 bytes).
+</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on tp_f3_parte2.pdf (17 pages, 8388769 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 173 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

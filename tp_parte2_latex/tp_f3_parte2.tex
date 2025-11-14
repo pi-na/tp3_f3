@@ -9,6 +9,8 @@
 \usepackage{caption}
 \usepackage{pgfplots}
 \usepackage{float}
+\usepackage{xcolor}
+
 
 \geometry{margin=2.5cm}
 \sisetup{output-decimal-marker = {,}}
@@ -105,7 +107,7 @@ y la tensión eficaz también resulta mayor que en el caso de media onda para el
 \begin{figure}[H]
     \centering
     \IfFileExists{esquema_rectificador_media_onda.png}{
-        \includegraphics[width=0.8\textwidth]{esquema_rectificador_media_onda.png}
+        \includegraphics[width=0.4\textwidth]{esquema_rectificador_media_onda.png}
     }{
         \fbox{Archivo \texttt{esquema\_rectificador\_media\_onda.png} no encontrado}
     }
@@ -115,7 +117,7 @@ y la tensión eficaz también resulta mayor que en el caso de media onda para el
 \begin{figure}[H]
     \centering
     \IfFileExists{esquema_rectificador_onda_completa_puente.png}{
-        \includegraphics[width=0.8\textwidth]{esquema_rectificador_onda_completa_puente.png}
+        \includegraphics[width=0.4\textwidth]{esquema_rectificador_onda_completa_puente.png}
     }{
         \fbox{Archivo \texttt{esquema\_rectificador\_onda\_completa\_puente.png} no encontrado}
     }
@@ -174,8 +176,8 @@ Los multímetros suelen mostrar el valor eficaz (o el promedio rectificado equiv
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{foto_montaje_media_onda_resistencia.jpeg}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_media_onda_resistencia.jpeg}
+    \IfFileExists{foto_montaje_media_onda_resistencia.png}{
+        \includegraphics[width=0.4\textwidth]{foto_montaje_media_onda_resistencia.png}
     }{
         \fbox{Archivo \texttt{foto\_montaje\_media\_onda\_resistencia} no encontrado}
     }
@@ -184,8 +186,8 @@ Los multímetros suelen mostrar el valor eficaz (o el promedio rectificado equiv
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{foto_montaje_onda_completa_puente.jpeg}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_onda_completa_puente.jpeg}
+    \IfFileExists{foto_montaje_onda_completa_puente.png}{
+        \includegraphics[width=0.4\textwidth]{foto_montaje_onda_completa_puente.png}
     }{
         \fbox{Archivo \texttt{foto\_montaje\_onda\_completa\_puente} no encontrado}
     }
@@ -195,8 +197,8 @@ Los multímetros suelen mostrar el valor eficaz (o el promedio rectificado equiv
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{foto_montaje_onda_completa_con_capacitor.jpeg}{
-        \includegraphics[width=0.8\textwidth]{foto_montaje_onda_completa_con_capacitor.jpeg}
+    \IfFileExists{foto_montaje_onda_completa_con_capacitor.png}{
+        \includegraphics[width=0.4\textwidth]{foto_montaje_onda_completa_con_capacitor.png}
     }{
         \fbox{Archivo \texttt{foto\_montaje\_media\_onda\_cooler} no encontrado}
     }
@@ -262,40 +264,40 @@ Es decir, a medida que aumenta la capacitancia, el porcentaje de rizado se reduc
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_resistencia_sin_C}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_sin_C}
+    \IfFileExists{media_onda_sin_c.png}{
+        \includegraphics[width=0.4\textwidth]{media_onda_sin_c.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_sin\_C} no encontrado}
+        \fbox{Archivo \texttt{media\_onda\_sin\_c.png} no encontrado}
     }
     \caption{Onda de salida del rectificador de media onda con carga resistiva, sin capacitor de filtrado (salida pulsante).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_resistencia_C1}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C1}
+    \IfFileExists{media_onda_c1.png}{
+        \includegraphics[width=0.4\textwidth]{media_onda_c1.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C1} no encontrado}
+        \fbox{Archivo \texttt{media\_onda\_c1.png} no encontrado}
     }
     \caption{Salida del rectificador de media onda con carga resistiva y capacitor \(C_1\).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_resistencia_C2}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C2}
+    \IfFileExists{media_onda_c2.png}{
+        \includegraphics[width=0.4\textwidth]{media_onda_c2.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C2} no encontrado}
+        \fbox{Archivo \texttt{media\_onda\_c2.png} no encontrado}
     }
     \caption{Salida del rectificador de media onda con carga resistiva y capacitor \(C_2\).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_resistencia_C3}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_C3}
+    \IfFileExists{media_onda_c3.png}{
+        \includegraphics[width=0.4\textwidth]{media_onda_c3.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_resistencia\_C3} no encontrado}
+        \fbox{Archivo \texttt{media\_onda\_c3.png} no encontrado}
     }
     \caption{Salida del rectificador de media onda con carga resistiva y capacitor \(C_3\).}
 \end{figure}
@@ -353,40 +355,40 @@ En la práctica, se observó que la velocidad del \emph{cooler} aumenta al utili
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_cooler_sin_C}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_sin_C}
+    \IfFileExists{cooler_sin_c.png}{
+        \includegraphics[width=0.4\textwidth]{cooler_sin_c.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_sin\_C} no encontrado}
+        \fbox{Archivo \texttt{cooler\_sin\_c.png} no encontrado}
     }
     \caption{Oscilograma de la salida del rectificador de media onda alimentando el \emph{cooler}, sin capacitor de filtrado.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_cooler_C1}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_C1}
+    \IfFileExists{cooler_c1.png}{
+        \includegraphics[width=0.4\textwidth]{cooler_c1.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_C1} no encontrado}
+        \fbox{Archivo \texttt{cooler\_c1.png} no encontrado}
     }
     \caption{Salida del rectificador de media onda alimentando el \emph{cooler} con capacitor \(C_1\).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_cooler_C2}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_C2}
+    \IfFileExists{cooler_c2.png}{
+        \includegraphics[width=0.4\textwidth]{cooler_c2.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_C2} no encontrado}
+        \fbox{Archivo \texttt{cooler\_c2.png} no encontrado}
     }
     \caption{Salida del rectificador de media onda alimentando el \emph{cooler} con capacitor \(C_2\).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_media_onda_cooler_C3}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_C3}
+    \IfFileExists{cooler_c3.png}{
+        \includegraphics[width=0.4\textwidth]{cooler_c3.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_media\_onda\_cooler\_C3} no encontrado}
+        \fbox{Archivo \texttt{cooler\_c3.png} no encontrado}
     }
     \caption{Salida del rectificador de media onda alimentando el \emph{cooler} con capacitor \(C_3\).}
 \end{figure}
@@ -442,40 +444,40 @@ La reducción del rizado es notablemente eficiente en onda completa, especialmen
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_onda_completa_sin_C}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_sin_C}
+    \IfFileExists{onda_completa_sin_c.png}{
+        \includegraphics[width=0.4\textwidth]{onda_completa_sin_c.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_sin\_C} no encontrado}
+        \fbox{Archivo \texttt{onda\_completa\_sin\_c.png} no encontrado}
     }
     \caption{Onda de salida del rectificador de onda completa sin capacitor de filtrado.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_onda_completa_C1}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_C1}
+    \IfFileExists{onda_completa_c1.png}{
+        \includegraphics[width=0.4\textwidth]{onda_completa_c1.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_C1} no encontrado}
+        \fbox{Archivo \texttt{onda\_completa\_c1.png} no encontrado}
     }
     \caption{Salida del rectificador de onda completa con capacitor \(C_1\).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_onda_completa_C2}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_C2}
+    \IfFileExists{onda_completa_c2.png}{
+        \includegraphics[width=0.4\textwidth]{onda_completa_c2.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_C2} no encontrado}
+        \fbox{Archivo \texttt{onda\_completa\_c2.png} no encontrado}
     }
     \caption{Salida del rectificador de onda completa con capacitor \(C_2\).}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \IfFileExists{oscilograma_onda_completa_C3}{
-        \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_C3}
+    \IfFileExists{onda_completa_c3.png}{
+        \includegraphics[width=0.4\textwidth]{onda_completa_c3.png}
     }{
-        \fbox{Archivo \texttt{oscilograma\_onda\_completa\_C3} no encontrado}
+        \fbox{Archivo \texttt{onda\_completa\_c3.png} no encontrado}
     }
     \caption{Salida del rectificador de onda completa con capacitor \(C_3\).}
 \end{figure}
@@ -537,7 +539,7 @@ Con el multimetro se midieron aproximadamente \SI{9,64}{\volt}. Valor cercano al
         V_{\text{RMS}} = \sqrt{\frac{1}{T} V_{\text{p}}^{2} \frac{T}{4}} = \frac{V_{\text{p}}}{2}
         \approx \SI{9,2}{\volt}.
     \]
-    El multímetro, en cambio, midió una tensión de salida de \SI{9,64}{\volt}. El valor teórico es mayor que el medido, lo que se explica porque la forma de onda real no es una media onda senoidal ideal (hay caídas en el diodo y deformaciones) y porque el instrumento está calibrado para senoidales puras, por lo que entrega un valor más cercano a un promedio efectivo que al valor eficaz ideal calculado.
+    El multímetro, en cambio, midió una tensión de salida de \SI{9,64}{\volt}. El valor medido (9,64 V) es ligeramente mayor que el valor teórico (~9,2 V). La diferencia es pequeña y puede atribuirse a tolerancias de la fuente, caída en el diodo, no idealidad de la forma de onda y al modo en que el multímetro estima el valor eficaz.
 
     \item \textbf{Relación entre la amplitud del rizado y la capacitancia.}\\[4pt]
     A partir de la tabla de media onda con carga resistiva:
@@ -594,17 +596,17 @@ Con el multimetro se midieron aproximadamente \SI{9,64}{\volt}. Valor cercano al
     \[
         V_{\text{pp,salida}} \approx \SI{16,1}{\volt},
     \]
-    por lo que la amplitud pico de la onda rectificada es aproximadamente
+    y dado que la onda rectificada de onda completa varía entre un mínimo cercano a 0 y un máximo positivo, se cumple aproximadamente \(V_{\text{pp,salida}} \approx V_{\text{p}}\). Por lo tanto, la amplitud pico de la onda rectificada es
     \[
-        V_{\text{p}} \approx \frac{V_{\text{pp,salida}}}{2} \approx \SI{8,05}{\volt}.
+        V_{\text{p}} \approx V_{\text{pp,salida}} \approx \SI{16,1}{\volt}.
     \]
     En una onda rectificada de onda completa ideal (sin capacitor), la expresión del valor eficaz teórico es
     \[
         V_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^{T} V_{\text{p}}^{2} \sin^{2}(\omega t)\, dt}
                       = \frac{V_{\text{p}}}{\sqrt{2}}
-                      \approx \frac{8{,}05}{\sqrt{2}} \approx \SI{5,7}{\volt}.
+        \approx \frac{16{,}1}{\sqrt{2}} \approx \SI{11,4}{\volt}.
     \]
-    Este es el valor eficaz teórico que debería medirse a la salida del rectificador de onda completa sin capacitor.
+    Este es el valor eficaz teórico que debería medirse a la salida del rectificador de onda completa sin capacitor, del mismo orden que la tensión eficaz de la fuente de entrada (unos \SI{12}{\volt}), descontando las caídas en los diodos y otras no idealidades.
 
     \item \textbf{Comparación de las tensiones de salida para los distintos capacitores con media onda.}\\[4pt]
     Comparando las tensiones pico a pico de salida filtrada para onda completa

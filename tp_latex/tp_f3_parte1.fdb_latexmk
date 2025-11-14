@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763096185.13204 "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_latex/tp_f3_parte1.tex" "tp_f3_parte1.pdf" "tp_f3_parte1" 1763096186.44235 0
-  "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_latex/tp_f3_parte1.tex" 1763096183.43821 20467 2a886e1b101cd9fb6a52833cf050c541 ""
+["pdflatex"] 1763100008.77101 "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_latex/tp_f3_parte1.tex" "tp_f3_parte1.pdf" "tp_f3_parte1" 1763100010.13709 0
+  "/Users/tomaspinausig/Desktop/f3/tp_f3/tp_latex/tp_f3_parte1.tex" 1763100007.42353 20467 51411ce608c9b739d9cb5bdf3b7cd629 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1741388039 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1741388039 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1741388039 5466553 2748998d7db8078826afa1f272036265 ""
@@ -163,8 +163,8 @@
   "CircuitoRLC.png" 1763093219.13135 819514 e413f266aebcf325adaf0f70223e579c ""
   "Grafico.png" 1763093219.13201 49480 136e58f7c3a7d22f885f3340b54a11ce ""
   "Osciloscopio.png" 1763093219.13679 2002776 4e9653c738923801eed449dd196f400b ""
-  "tp_f3_parte1.aux" 1763096186.36701 3535 0f8023bab81b2d519e0c345d9a1077af "pdflatex"
-  "tp_f3_parte1.tex" 1763096183.43821 20467 2a886e1b101cd9fb6a52833cf050c541 ""
+  "tp_f3_parte1.aux" 1763100010.0641 3534 94e63cca4a2bf3e32c220d11bd7cd195 "pdflatex"
+  "tp_f3_parte1.tex" 1763100007.42353 20467 51411ce608c9b739d9cb5bdf3b7cd629 ""
   (generated)
   "tp_f3_parte1.aux"
   "tp_f3_parte1.log"
