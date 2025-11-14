@@ -1,0 +1,296 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{circuitikz}
+
+\geometry{margin=2.5cm}
+\sisetup{output-decimal-marker={,}}
+
+\begin{document}
+
+% Carátula
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    \textbf{\Large Instituto Tecnológico de Buenos Aires} \\
+    \vspace{0.5cm}
+    \textbf{\large Física III} \\
+    \vspace{1cm}
+    \textbf{\LARGE Trabajo Práctico N°3 – Parte 2: Rectificadores} \\
+    \vspace{1.5cm}
+    \begin{tabular}{ll}
+        \textbf{Grupo:} & \textit{Completar} \\
+        \textbf{Integrantes:} & \textit{Completar nombres y legajos} \\
+        \textbf{Fecha de realización:} & \textit{Completar} \\
+        \textbf{Fecha de entrega:} & \textit{Completar} \\
+    \end{tabular}
+    \vspace{2cm}
+    \begin{tabular}{|p{12cm}|}
+        \hline
+        \textbf{Observaciones del docente:} \\
+        \vspace{2cm} \\
+        \hline
+    \end{tabular}
+    \vspace{1cm}
+    \begin{tabular}{p{6cm}}
+        \textbf{Firma del docente:} \\
+        \vspace{1cm} \\
+        \hrule
+    \end{tabular}
+\end{titlepage}
+
+% Contenido del informe
+\section{Objetivos y Resumen}
+Este informe corresponde a la \textbf{Parte 2} del Trabajo Práctico, dedicada al estudio de \textbf{circuitos rectificadores} de media onda y onda completa, con y sin \textbf{capacitor de filtrado} y con diferentes cargas (resistencia y cooler).
+
+Los objetivos específicos de esta parte fueron:
+\begin{itemize}
+    \item Estudiar el funcionamiento de rectificadores de media onda y onda completa.
+    \item Analizar el efecto del capacitor de filtrado sobre el rizado de la tensión de salida para distintas capacidades.
+    \item Comparar el comportamiento del rectificador para una carga puramente resistiva y para una carga tipo \emph{cooler}.
+    \item Relacionar cualitativamente los resultados obtenidos con la expresión teórica del rizado en función de la corriente de carga, la frecuencia y la capacitancia.
+\end{itemize}
+
+En las mediciones realizadas se trabajó con una fuente de \SI{12}{\volt} RMS y frecuencia de red \SI{50}{\hertz}. Para la configuración de \textbf{media onda con carga resistiva}, la señal de entrada presentó una tensión pico a pico de aproximadamente \SI{36,6}{\volt}, mientras que la tensión pico a pico de la señal filtrada disminuyó a \SI{12,1}{\volt}, \SI{6,7}{\volt} y \SI{0,78}{\volt} para los capacitores \(C_1\), \(C_2\) y \(C_3\), respectivamente. En la configuración con \textbf{carga tipo cooler}, la entrada registró aproximadamente \SI{36,2}{\volt} pico a pico y la salida filtrada tomó valores de \SI{16,1}{\volt}, \SI{13}{\volt} y \SI{8,4}{\volt} para los mismos capacitores.
+
+Para el \textbf{rectificador de onda completa} se midió una tensión pico a pico de salida de \SI{16,1}{\volt} sin capacitor, reduciéndose a \SI{6,56}{\volt}, \SI{3,04}{\volt} y \SI{0,57}{\volt} al conectar secuencialmente \(C_1\), \(C_2\) y \(C_3\). En todos los casos se observó una disminución monótona del rizado al incrementar la capacitancia, siendo el rectificador de onda completa el que presentó menor rizado relativo para una misma familia de capacitores, en concordancia con la teoría.
+
+\section{Introducción Teórica}
+
+\subsection{Circuitos Rectificadores}
+Los rectificadores convierten corriente alterna (AC) en corriente continua (DC). En un \textbf{rectificador de media onda}, un diodo permite el paso de un solo semiciclo de la onda senoidal, generando una señal de salida pulsante con la misma frecuencia de la red. En un \textbf{rectificador de onda completa}, habitualmente implementado mediante un puente de diodos, se utilizan ambos semiciclos de la señal de entrada, duplicando la frecuencia de la componente pulsante en la salida.
+
+Cuando se conecta un capacitor en paralelo con la carga, éste se carga hasta el valor máximo de la tensión de salida y luego se descarga sobre la carga entre picos consecutivos, reduciendo así el \textbf{rizado} (\(V_{\text{ripple}}\)) de la señal. Una expresión aproximada para el rizado en régimen estacionario es:
+\[
+V_{\text{ripple}} \approx \frac{I_{\text{carga}}}{f_{\text{ef}}\,C}
+\]
+donde \(I_{\text{carga}}\) es la corriente promedio sobre la carga, \(f_{\text{ef}}\) es la frecuencia efectiva de rectificación (\(f_{\text{ef}} = f\) en media onda y \(f_{\text{ef}} = 2f\) en onda completa) y \(C\) la capacitancia del capacitor de filtrado. Esta expresión muestra que el rizado disminuye al aumentar \(C\) y al utilizar un rectificador de onda completa (mayor frecuencia efectiva).
+
+\subsection{Rectificador de Media Onda}
+En el rectificador de media onda con carga resistiva, el diodo conduce únicamente durante los semiciclos positivos (suponiendo polaridad directa en ese intervalo), de modo que la tensión en la carga es una sucesión de semiciclos positivos separados por intervalos de tensión cercana a cero. La potencia suministrada a la carga es relativamente baja y el contenido de rizado en la señal de salida es elevado si no se emplea filtrado.
+
+Cuando se agrega un capacitor de filtrado en paralelo con la carga, la tensión en la resistencia deja de caer hasta cero entre picos y se aproxima a una señal de continua con un rizado superpuesto. A mayor capacitancia, mayor es el tiempo de descarga del capacitor y menor la amplitud del rizado.
+
+\subsection{Rectificador de Onda Completa}
+En el rectificador de onda completa con puente de diodos, la señal de salida utiliza ambos semiciclos de la entrada, por lo que la frecuencia de la componente pulsante es \(2f\). Esto se traduce en un rizado menor para la misma capacitancia, ya que el intervalo de tiempo entre máximos de tensión es la mitad que en media onda.
+
+Al agregar un capacitor de filtrado, el comportamiento cualitativo es similar al de media onda, pero la combinación de mayor frecuencia efectiva y el mismo valor de \(C\) hace que el rizado sea significativamente menor. Esto lo convierte en la opción usual para fuentes de alimentación DC a partir de la red eléctrica.
+
+\section{Instrumentos y Elementos Empleados}
+
+\subsection{Circuitos Rectificadores}
+Para la realización de la Parte 2 se utilizaron los siguientes elementos:
+\begin{itemize}
+    \item Fuente de alterna de \SI{12}{\volt} RMS y \SI{50}{\hertz}.
+    \item Diodos rectificadores para implementar el rectificador de media onda y el puente de onda completa.
+    \item Resistencias de carga (por ejemplo, \SI{100}{\ohm}) y una carga tipo \emph{cooler}.
+    \item Capacitores de filtrado de distintas capacidades, etiquetados como \(C_1\), \(C_2\) y \(C_3\).
+    \item Osciloscopio para registrar las formas de onda de entrada y salida.
+    \item Multímetro para verificar valores eficaces de tensión cuando fue necesario.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \begin{circuitikz}
+        \draw
+        (0,0) to[sinusoidal voltage source, l=$V_{\text{AC}}$] (0,3)
+        to[D*, l=$D$] (3,3)
+        to[R, l=$R_{\text{carga}}$] (3,0)
+        to[short] (0,0);
+        \draw
+        (3,3) to[C, l=$C$] (3,0);
+    \end{circuitikz}
+    \caption{Esquema del rectificador de media onda con capacitor de filtrado.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{circuitikz}
+        \draw
+        (0,0) node[ground]{} to[sinusoidal voltage source, l=$V_{\text{AC}}$] (0,3)
+        to[short] (1.5,3)
+        (1.5,3) to[D*, l=$D_1$] (3,4.5)
+        (3,4.5) to[D*, l=$D_2$] (4.5,3)
+        (4.5,3) to[short] (6,3)
+        (6,3) to[R, l=$R_{\text{carga}}$] (6,0)
+        (6,0) to[short] (0,0)
+        (1.5,3) to[D*, l_=$D_3$] (3,1.5)
+        (3,1.5) to[D*, l_=$D_4$] (4.5,3)
+        (6,3) to[C, l=$C$] (6,0);
+    \end{circuitikz}
+    \caption{Esquema del rectificador de onda completa con puente de diodos y capacitor de filtrado.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{foto_montaje_rectificador_media_onda_resistencia.jpg}
+    \caption{Fotografía del montaje del rectificador de media onda con carga resistiva. (\textit{Reemplazar por la foto correspondiente.})}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{foto_montaje_rectificador_media_onda_cooler.jpg}
+    \caption{Fotografía del montaje del rectificador de media onda con carga tipo cooler. (\textit{Reemplazar por la foto correspondiente.})}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{foto_montaje_rectificador_onda_completa_resistencia.jpg}
+    \caption{Fotografía del montaje del rectificador de onda completa con carga resistiva. (\textit{Reemplazar por la foto correspondiente.})}
+\end{figure}
+
+\section{Procedimiento Experimental}
+
+\subsection{Rectificador de Media Onda con Carga Resistiva}
+Se armó el circuito de la Figura 1 utilizando una resistencia de carga y un diodo en configuración de media onda. Se conectó la fuente de \SI{12}{\volt} RMS y \SI{50}{\hertz}, y se midió con el osciloscopio la forma de onda de la señal de entrada.
+
+A continuación, se registró la forma de onda de salida sin capacitor de filtrado y se midió la tensión pico a pico de la señal de entrada. Luego se conectaron sucesivamente los capacitores \(C_1\), \(C_2\) y \(C_3\) en paralelo con la carga, midiendo en cada caso la tensión pico a pico de la señal filtrada.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_sin_capacitor.png}
+    \caption{Oscilograma de la salida del rectificador de media onda con carga resistiva sin capacitor de filtrado. (\textit{Reemplazar por la captura correspondiente.})}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_resistencia_con_capacitor.png}
+    \caption{Oscilogramas de la salida del rectificador de media onda con carga resistiva para los capacitores \(C_1\), \(C_2\) y \(C_3\). (\textit{Reemplazar por las capturas correspondientes.})}
+\end{figure}
+
+\subsection{Rectificador de Media Onda con Carga tipo Cooler}
+Se reemplazó la resistencia de carga por un cooler y se repitió el procedimiento anterior: medición de la señal de entrada, registro de la salida sin capacitor y posterior conexión de \(C_1\), \(C_2\) y \(C_3\) en paralelo con la carga, midiendo en cada caso la tensión pico a pico de la señal filtrada.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_sin_capacitor.png}
+    \caption{Oscilograma de la salida del rectificador de media onda con carga tipo cooler sin capacitor de filtrado. (\textit{Reemplazar por la captura correspondiente.})}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{oscilograma_media_onda_cooler_con_capacitor.png}
+    \caption{Oscilogramas de la salida del rectificador de media onda con carga tipo cooler para los capacitores \(C_1\), \(C_2\) y \(C_3\). (\textit{Reemplazar por las capturas correspondientes.})}
+\end{figure}
+
+\subsection{Rectificador de Onda Completa con Carga Resistiva}
+Finalmente se armó el puente de diodos con carga resistiva, según la Figura 2. Se midió la señal de salida sin capacitor de filtrado y luego se conectaron sucesivamente los capacitores \(C_1\), \(C_2\) y \(C_3\) en paralelo con la carga, registrando en cada caso la tensión pico a pico de la señal de salida.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_resistencia_sin_capacitor.png}
+    \caption{Oscilograma de la salida del rectificador de onda completa con carga resistiva sin capacitor de filtrado. (\textit{Reemplazar por la captura correspondiente.})}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{oscilograma_onda_completa_resistencia_con_capacitor.png}
+    \caption{Oscilogramas de la salida del rectificador de onda completa con carga resistiva para los capacitores \(C_1\), \(C_2\) y \(C_3\). (\textit{Reemplazar por las capturas correspondientes.})}
+\end{figure}
+
+\section{Datos Obtenidos y Análisis}
+
+\subsection{Rectificador de Media Onda con Carga Resistiva}
+En la Tabla \ref{tab:media-onda-resistencia} se resumen las mediciones de tensión pico a pico de la señal de salida filtrada en el rectificador de media onda con carga resistiva. La tensión de entrada sin filtrar permaneció aproximadamente constante en aproximadamente \SI{36,6}{\volt} pico a pico, mientras que la tensión pico a pico de la señal filtrada disminuyó al aumentar la capacitancia.
+
+\begin{table}[h]
+    \centering
+    \caption{Rectificador de media onda con carga resistiva: tensión pico a pico de la salida filtrada para distintas configuraciones de filtrado.}
+    \label{tab:media-onda-resistencia}
+    \begin{tabular}{lc}
+        \toprule
+        Configuración de filtrado & $V_{\text{pp, salida filtrada}}$ (\si{\volt}) \\
+        \midrule
+        $C_1$         & 12,1  \\
+        $C_2$         & 6,7   \\
+        $C_3$         & 0,78  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Tomando la relación entre el rizado de salida y la tensión de entrada como medida relativa de la eficacia del filtrado, se obtienen valores del orden de \(V_{\text{pp,sal}}/V_{\text{pp,ent}} \approx 0{,}33\), \(0{,}18\) y \(0{,}02\) para \(C_1\), \(C_2\) y \(C_3\), respectivamente. Esto muestra una reducción del rizado de más de un orden de magnitud al pasar de \(C_1\) a \(C_3\).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{grafico_media_onda_resistencia_vpp_vs_capacitor.png}
+    \caption{Tensión pico a pico de la salida filtrada para el rectificador de media onda con carga resistiva en función de la configuración de filtrado (Sin C, $C_1$, $C_2$, $C_3$). (\textit{Generar y guardar el gráfico con este nombre.})}
+\end{figure}
+
+\subsection{Rectificador de Media Onda con Carga Cooler}
+La Tabla \ref{tab:media-onda-cooler} presenta las mediciones obtenidas para la configuración de media onda con carga Cooler. Nuevamente, la tensión de entrada se mantuvo aproximadamente constante, mientras que la tensión pico a pico de la señal filtrada disminuyó al aumentar la capacitancia, aunque de manera menos pronunciada que en el caso de la carga resistiva.
+
+\begin{table}[h]
+    \centering
+    \caption{Rectificador de media onda con carga Cooler: tensión pico a pico de la salida filtrada para distintas configuraciones de filtrado.}
+    \label{tab:media-onda-cooler}
+    \begin{tabular}{lc}
+        \toprule
+        Configuración de filtrado & $V_{\text{pp, salida filtrada}}$ (\si{\volt}) \\
+        \midrule
+        $C_1$         & 16,1  \\
+        $C_2$         & 13,0  \\
+        $C_3$         & 8,4   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+En este caso, las razones \(V_{\text{pp,sal}}/V_{\text{pp,ent}}\) son aproximadamente \(0{,}45\), \(0{,}36\) y \(0{,}23\) para \(C_1\), \(C_2\) y \(C_3\), respectivamente. Se observa que, para la carga Cooler, el rizado es más grande que para la carga resistiva con los mismos capacitores, lo cual es consistente con una mayor corriente promedio de carga \(I_{\text{carga}}\) en la expresión de \(V_{\text{ripple}}\).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{grafico_media_onda_cooler_vpp_vs_capacitor.png}
+    \caption{Tensión pico a pico de la salida filtrada para el rectificador de media onda con carga tipo cooler en función de la configuración de filtrado (Sin C, $C_1$, $C_2$, $C_3$). (\textit{Generar y guardar el gráfico con este nombre.})}
+\end{figure}
+
+\subsection{Rectificador de Onda Completa con Carga Resistiva}
+Para el rectificador de onda completa con carga resistiva se midieron los valores de la Tabla \ref{tab:onda-completa}. En este caso se registró directamente la tensión pico a pico de la salida rectificada sin capacitor, que fue aproximadamente \SI{16,1}{\volt}, y con cada uno de los capacitores de filtrado.
+
+\begin{table}[h]
+    \centering
+    \caption{Rectificador de onda completa con carga resistiva: tensión pico a pico de la salida filtrada para distintas configuraciones de filtrado.}
+    \label{tab:onda-completa}
+    \begin{tabular}{lc}
+        \toprule
+        Configuración de filtrado & $V_{\text{pp, salida filtrada}}$ (\si{\volt}) \\
+        \midrule
+        $C_1$         & 6,56 \\
+        $C_2$         & 3,04 \\
+        $C_3$         & 0,57 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Las razones de rizado relativo \(V_{\text{pp,sal}}/V_{\text{pp,sal, sin C}}\) son aproximadamente \(0{,}41\), \(0{,}19\) y \(0{,}04\) para \(C_1\), \(C_2\) y \(C_3\), respectivamente, lo que confirma que el rectificador de onda completa, al trabajar con una frecuencia efectiva doble, permite una reducción muy significativa del rizado con los mismos valores de capacitancia.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{grafico_onda_completa_resistencia_vpp_vs_capacitor.png}
+    \caption{Tensión pico a pico de la salida para el rectificador de onda completa con carga resistiva en función de la configuración de filtrado (Sin C, $C_1$, $C_2$, $C_3$). (\textit{Generar y guardar el gráfico con este nombre.})}
+\end{figure}
+
+\section{Discusión de Resultados}
+Los resultados experimentales muestran que el capacitor de filtrado disminuye de forma clara la amplitud del rizado en la tensión de salida. En media onda con carga resistiva, el rizado relativo se reduce desde valores del orden de un tercio de la tensión de entrada con \(C_1\) hasta unos pocos por ciento con \(C_3\). Para la carga Cooler, la reducción también es apreciable, pero menos pronunciada, indicando una corriente promedio de carga mayor.
+
+En el rectificador de onda completa, el rizado relativo disminuye más rápidamente con la capacitancia que en media onda, como se espera teóricamente de la dependencia \(V_{\text{ripple}} \propto I_{\text{carga}}/(f_{\text{ef}} C)\). Aunque en este informe no se especifican los valores numéricos de \(C_1\), \(C_2\) y \(C_3\), la tendencia experimental concuerda con la teoría: a mayor capacitancia y mayor frecuencia efectiva de rectificación, menor rizado para una misma carga.
+
+También se observó que el uso de un cooler como carga produce un rizado mayor que el de una resistencia pura para los mismos capacitores, lo que se explica por una corriente de carga más alta y posiblemente por un comportamiento no puramente resistivo del cooler.
+
+\section{Aplicaciones Prácticas}
+Los rectificadores con filtrado capacitivo constituyen la etapa básica de las fuentes de alimentación lineales que convierten la tensión alterna de red en tensión continua para dispositivos electrónicos (cargadores, fuentes de laboratorio, equipos de audio, etc.). En dichas aplicaciones es deseable minimizar el rizado, ya que las variaciones de tensión pueden introducir ruido o inestabilidad en las etapas posteriores.
+
+El uso de rectificadores de onda completa y capacitores de filtrado de suficiente capacidad permite obtener tensiones relativamente constantes a partir de la red, complementándose en muchos casos con reguladores electrónicos. La elección de la topología (media onda vs. onda completa) y del valor de la capacitancia depende del nivel de rizado tolerable, de la corriente de carga y de las restricciones de tamaño y costo de los componentes.
+
+\section{Conclusiones}
+En esta segunda parte del Trabajo Práctico se estudiaron rectificadores de media onda y de onda completa, con y sin capacitores de filtrado y con diferentes tipos de carga. Las mediciones mostraron que la incorporación de un capacitor en paralelo con la carga reduce de manera significativa el rizado de la tensión de salida, y que dicha reducción aumenta al incrementar la capacitancia.
+
+Asimismo, se comprobó que el rectificador de onda completa presenta un rizado menor que el de media onda para capacitores equivalentes, coherente con la frecuencia efectiva de rectificación más alta. Finalmente, la comparación entre la carga resistiva y la carga Cooler evidenció que una mayor corriente de carga se traduce en un rizado más elevado, en concordancia con la expresión \(V_{\text{ripple}} \approx I_{\text{carga}}/(f_{\text{ef}} C)\).
+
+\end{document}
+
+

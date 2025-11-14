@@ -1,0 +1,13 @@
+Configuración,,V pico a pico en onda filtrada (V),V pico a pico en onda de entrada sin filtrar (V)
+Media onda,Sin C,,"36,6"
+,C₁,"12,1",
+,C₂,"6,7",
+,C₃,"0,78",
+Cooler,Sin C,,"36,2"
+,C₁,"16,1",
+,C₂,13,
+,C₃,"8,4",
+Onda completa,Sin C,"16,1",
+,C₁,"6,56",
+,C₂,"3,04",
+,C₃,"0,57",
